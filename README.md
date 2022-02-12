@@ -29,3 +29,6 @@ Once installed, the following steps will install everything needed:
 * install rest of dependencies: `pip install requirements.txt`
 
 Now you're ready to launch and experiment with examples!
+
+
+https://static.packt-cdn.com/downloads/9781838826994_ColorImages.pdf
