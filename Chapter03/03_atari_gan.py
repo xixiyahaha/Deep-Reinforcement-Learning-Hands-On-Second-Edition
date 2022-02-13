@@ -141,10 +141,17 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     device = torch.device("cuda" if args.cuda else "cpu")
+
+    # envs = []
+    # for name in ['Breakout-v0', 'AirRaid-v0', 'Pong-v0']:
+    #     env = InputWrapper(gym.make(name))
+    #     envs.append(env)
+
     envs = [
         InputWrapper(gym.make(name))
         for name in ('Breakout-v0', 'AirRaid-v0', 'Pong-v0')
     ]
+
     input_shape = envs[0].observation_space.shape
 
     net_discr = Discriminator(input_shape=input_shape).to(device)
